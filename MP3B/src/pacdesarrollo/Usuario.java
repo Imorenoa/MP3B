@@ -41,6 +41,6 @@ public class Usuario {
 	}
 	
 	public String toString() {
-		return "Usuario con los datos: \n\tNombre: " +	nombre + ", edad:" + edad + ", DNI" + DNI;
+		return "Usuario con los datos: \n\tNombre: " +	nombre + ", Edad: " + edad + ", DNI: " + DNI;
 	}
 }

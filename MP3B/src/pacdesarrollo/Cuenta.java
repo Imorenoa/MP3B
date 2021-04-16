@@ -47,12 +47,11 @@ public class Cuenta {
 		return saldo;
 	}
 	
-	public double addGastos(String description, double cantidad) {
+	public double addGastos(String description, double cantidad) throws GastoException {
 		
-		if (cantidad >= saldo) {
+		if (cantidad > saldo) {
 			
-			/* TODO Lanzar exception */
-			return 0.0;
+			throw new GastoException();
 			
 		} else {
 			
@@ -76,7 +75,7 @@ public class Cuenta {
 	}
 	
 	public String toString() {
-		return "Cuenta de " + usuario.getNombre() + "\n\tSaldo: " + saldo;
+		return "Cuenta de " + usuario + "\n\tSaldo: " + saldo;
 	}
 	
 	
