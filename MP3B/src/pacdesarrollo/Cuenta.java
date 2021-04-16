@@ -1,5 +1,6 @@
 package pacdesarrollo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cuenta {
@@ -8,13 +9,15 @@ public class Cuenta {
 	
 	private Usuario usuario;
 	
-	private List<Gasto> gastos;
+	private List<Gasto> gastos= new ArrayList<>();
 	
-	private List<Ingreso> ingresos;
+	private List<Ingreso> ingresos = new ArrayList<>();
 	
 	public Cuenta (Usuario usuario) {
+		
 		this.usuario = usuario;
 		
+		this.saldo = 0.0;
 	}
 	
 	public double getSaldo() {
@@ -35,12 +38,33 @@ public class Cuenta {
 	
 	public double addIngresos(String description, double cantidad) {
 		
-		return 0.0;
+		this.saldo +=  cantidad;
+		
+		Ingreso ingreso = new Ingreso(cantidad, description);
+						
+		this.ingresos.add(ingreso);
+		
+		return saldo;
 	}
 	
 	public double addGastos(String description, double cantidad) {
 		
-		return 0.0;
+		if (cantidad >= saldo) {
+			
+			/* TODO Lanzar exception */
+			return 0.0;
+			
+		} else {
+			
+			this.saldo -= saldo;
+			
+			Gasto gasto = new Gasto(cantidad, description);
+			
+			this.gastos.add(gasto);
+			
+			return saldo;
+		}
+				
 	}
 	
 	public List<Gasto> getGastos(){

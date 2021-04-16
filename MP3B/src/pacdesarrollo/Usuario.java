@@ -29,10 +29,15 @@ public class Usuario {
 	public String getDNI () {
 		return DNI;
 	}
-	
-	public boolean setDNI (String DNI) {
-		/* TODO establecer funcionalidad del SET DNI*/
-		return false;
+		
+	public boolean setDNI(String DNI) {
+		//REGEX
+		String regex = "(\\d{8})([-]?)([A-Za-z]{1})";
+		if (DNI.matches(regex)) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 	
 	public String toString() {

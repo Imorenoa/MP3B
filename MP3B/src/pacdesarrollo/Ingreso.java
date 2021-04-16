@@ -8,7 +8,7 @@ public class Ingreso extends Dinero{
 			
 		}
 		public String toString() {
-			return "Datos del ingreso: Cantidad:" + dinero + " , descripcion: " + description;
+			return "Datos del ingreso: Cantidad: " + dinero + " , descripcion: " + description;
 			
 		}
 }
