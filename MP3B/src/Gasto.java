@@ -1,4 +1,4 @@
-package pacdesarrollo;
+
 
 public class Gasto extends Dinero{	
 	
@@ -11,7 +11,7 @@ public class Gasto extends Dinero{
 	}
 	
 	public String toString() {
-		return "Datos del gasto: \n\t Cantidad:" + dinero + " , descripcion: " + description;
+		return "\nDescripcion: " + description + "\t\t\tCantidad: " + dinero + "€\n";
 		
 	}
 }

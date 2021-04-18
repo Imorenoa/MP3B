@@ -1,4 +1,4 @@
-package pacdesarrollo;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -55,7 +55,7 @@ public class Cuenta {
 
 		} else {
 
-			this.saldo -= saldo;
+			this.saldo -= cantidad;
 
 			Gasto gasto = new Gasto(cantidad, description);
 
@@ -75,7 +75,7 @@ public class Cuenta {
 	}
 
 	public String toString() {
-		return "Cuenta de " + usuario + "\n\tSaldo: " + saldo;
+		return "Cuenta de " + usuario.getNombre() + "\tSaldo: " + saldo;
 	}
 
 }

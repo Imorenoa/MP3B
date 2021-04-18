@@ -1,4 +1,4 @@
-package pacdesarrollo;
+
 
 public class Ingreso extends Dinero{
 
@@ -8,7 +8,7 @@ public class Ingreso extends Dinero{
 			
 		}
 		public String toString() {
-			return "Datos del ingreso: Cantidad: " + dinero + " , descripcion: " + description;
+			return "\nDescripcion: " + description + "\t\t\tCantidad: " + dinero + "€\n";
 			
 		}
 }

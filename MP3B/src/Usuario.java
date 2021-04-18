@@ -1,4 +1,4 @@
-package pacdesarrollo;
+
 
 public class Usuario {
 
@@ -35,10 +35,12 @@ public class Usuario {
 		// REGEX
 		String regex = "(\\d{8})([-]?)([A-Za-z]{1})";
 		if (DNI.matches(regex)) {
+			this.DNI = DNI;
 			return true;
 		} else {
 			return false;
 		}
+		
 	}
 
 	public String toString() {
